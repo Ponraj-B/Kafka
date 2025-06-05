@@ -1,0 +1,73 @@
+
+1. What is Kafka?
+   - Apache Kafka is a distributed event streaming platform capable of handling high-throughput, low-latency data streams. It is used for building real-time data pipelines and streaming applications.
+
+2. Kafka Architecture
+   - Kafka's architecture is designed for scalability and fault tolerance. It consists of several components including producers, consumers, brokers, topics, and partitions.
+
+3. Components of Kafka
+   - Producer: Sends data to Kafka topics.
+   - Consumer: Reads data from Kafka topics.
+   - Broker: Kafka server that stores data and serves clients.
+   - Topic: A category or feed name to which records are published.
+   - Partition: Subdivision of a topic for parallel processing.
+
+4. Core API Architecture of Kafka
+   - Producer API: Allows applications to send data to Kafka topics.
+   - Consumer API: Allows applications to read data from Kafka topics.
+   - Streams API: Sam as Consumer API but it can the ability to edit the read messages.
+   - Connect API: Integrates Kafka with external systems.
+
+5. Apache Kafka Events
+   - Kafka events are the records or messages that are produced and consumed by applications.
+
+6. Kafka Clusters
+   - Kafka clusters consist of multiple brokers working together to provide high availability and fault tolerance.
+
+7. Kafka Architecture Replica
+   - Kafka uses replication to ensure data durability and high availability. Each partition can have multiple replicas.
+
+8. Kafka Architecture Schema
+   - Kafka supports schema management to ensure data consistency and compatibility.
+
+9. Handling High Volume of Data
+   - Kafka handles high volumes of data efficiently through partitioning and replication. For example, it can process millions of messages per second.
+
+10. Producer Configuration
+    - Key configurations include:
+      - Bootstrap Servers: Initial set of Kafka brokers.
+      - Acks: Acknowledgment settings (0, 1, all).
+      - Batch Size: Size of batches for sending records.
+      - Compression Type: Compression settings (e.g., gzip, snappy).
+      - Retries: Number of retry attempts for failed sends.
+
+11. Consumer Configuration
+    - Key configurations include:
+      - Bootstrap Servers: Initial set of Kafka brokers.
+      - Group.id: Consumer group identifier.
+      - Enable.auto.commit: Automatic offset commit settings.
+      - Auto.commit.interval.ms: Interval for auto commits.
+      - Auto.offset.reset: Offset reset policy.
+      - Max.poll.records: Maximum number of records to fetch.
+      - Fetch.min.bytes and Fetch.max.wait.ms: Fetch settings.
+
+12. Consumer Group Coordinator
+    - Responsible for coordination, load balancing, rebalancing, and fault tolerance within consumer groups.
+
+13. ZooKeeper
+    - ZooKeeper is used for managing and coordinating Kafka brokers.
+
+14. Apache Kafka Not Recommended For
+    - Kafka is not ideal for scenarios requiring complex transactions or low-latency processing of small messages.
+
+15. Consumer Lag
+    - Consumer lag refers to the delay between the latest record in a partition and the record being processed by the consumer.
+
+16. Types of Lag
+    - Different types of lag include end-to-end latency, processing lag, and network lag.
+
+17. Strategies to Address Lag
+    - Strategies include optimizing consumer configurations, increasing partition count, and improving network infrastructure.
+
+18. Guarantees Provided by Kafka
+    - Kafka provides guarantees such as message durability, fault tolerance, and exactly-once processing semantics.
